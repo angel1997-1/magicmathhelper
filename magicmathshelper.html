@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Resource</title>
+    <style>
+        body {
+            background-color: #121212; /* Dark background */
+            color: #f0f0f0; /* Light text color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #ffcc00; /* Cozy yellow for headings */
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #ffcc00; /* Cozy yellow for links */
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #444; /* Dark border */
+            border-radius: 8px;
+            background-color: #1e1e1e; /* Slightly lighter dark background */
+        }
+        textarea {
+            background-color: #2e2e2e; /* Darker background for textarea */
+            color: #f0f0f0; /* Light text for textarea */
+            border: 1px solid #444; /* Dark border */
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            resize: vertical;
+        }
+        button {
+            background-color: #ffcc00; /* Cozy yellow button */
+            color: #121212; /* Dark text on button */
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e6b800; /* Darker yellow on hover */
+        }
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .calc-button {
+            background-color: #ffcc00;
+            color: #121212;
+            border: none;
+            padding: 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .calc-button:hover {
+            background-color: #e6b800; /* Darker yellow on hover */
+        }
+        #result {
+            grid-column: span 4;
+            padding: 20px;
+            background-color: #2e2e2e;
+            border: 1px solid #444;
+            border-radius: 4px;
+            text-align: right;
+            font-size: 1.5em;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #1e1e1e; /* Dark footer background */
+            border-radius: 8px;
+        }
+/* Add these to your existing style section */
+.footer-content {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.feedback-section {
+    margin-top: 20px;
+}
+
+.radio-group {
+    margin: 15px 0;
+}
+
+.radio-group label {
+    margin-right: 20px;
+    color: #f0f0f0;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+}
+
+.comments-group {
+    margin: 15px 0;
+}
+
+.comments-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #f0f0f0;
+}
+
+.comments-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+    background-color: #ffcc00;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #e6b800;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Magic maths helper</h1>
+        <p>Explore formulas and concepts in Math, Physics, and Chemistry.</p>
+    </header>
+
+    <nav>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="#math">Math</a></li>
+            <li><a href="#physics">Physics</a></li>
+            <li><a href="#chemistry">Chemistry</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+            <li><a href="#notes">Notes</a></li>
+        </ul>
+    </nav>
+
+    <section id="math">
+        <h2>Math Formulas</h2>
+        <p>Explore key formulas in algebra, calculus, and trigonometry.</p>
+        <ul>
+            <li>Quadratic Formula: x = (-b ± √(b² - 4ac)) / 2a</li>
+            <li>Derivative of f(x): f'(x) = lim (h→0) [f(x+h) - f(x)] / h</li>
+            <li>sin²θ + cos²θ = 1</li>
+        </ul>
+        <p><strong>Interactive Diagram:</strong> [Math Diagram Placeholder]</p>
+    </section>
+
+    <section id="physics">
+        <h2>Physics Formulas</h 2>
+        <p>Explore key formulas in motion, energy, and waves.</p>
+        <ul>
+            <li>Force: F = m × a</li>
+            <li>Kinetic Energy: KE = 0.5 × m × v²</li>
+            <li>Wave Speed: v = f × λ</li>
+        </ul>
+        <p><strong>Interactive Diagram:</strong> [Physics Diagram Placeholder]</p>
+    </section>
+
+    <section id="chemistry">
+        <h2>Chemistry Formulas</h2>
+        <p>Explore key formulas in molarity, reaction rates, and gas laws.</p>
+        <ul>
+            <li>Molarity: M = moles of solute / liters of solution</li>
+            <li>Reaction Rate: Rate = change in concentration / change in time</li>
+            <li>Ideal Gas Law: PV = nRT</li>
+        </ul>
+        <p><strong>Interactive Diagram:</strong> [Chemistry Diagram Placeholder]</p>
+    </section>
+
+    <section id="calculator">
+        <h2>Calculator</h2>
+        <p>Perform calculations with ease using this interactive calculator.</p>
+        <div class="calculator">
+            <button class="calc-button">7</button>
+            <button class="calc-button">8</button>
+            <button class="calc-button">9</button>
+            <button class="calc-button">/</button>
+            <button class="calc-button">4</button>
+            <button class="calc-button">5</button>
+            <button class="calc-button">6</button>
+            <button class="calc-button">*</button>
+            <button class="calc-button">1</button>
+            <button class="calc-button">2</button>
+            <button class="calc-button">3</button>
+            <button class="calc-button">-</button>
+            <button class="calc-button">0</button>
+            <button class="calc-button">.</button>
+            <button class="calc-button">=</button>
+            <button class="calc-button">+</button>
+            <div id="result">0</div>
+        </div>
+    </section>
+
+    <section id="notes">
+        <h2>Notes</h2>
+        <p>Take notes and organize your thoughts with this dedicated section.</p>
+        <textarea rows="10" cols="50"></textarea>
+    </section>
+
+ 
+
+    <footer>
+        <p>&copy; 2024 Magic Maths Helper</p>
+    </footer>
+</body>
+</html>
